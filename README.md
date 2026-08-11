@@ -15,6 +15,7 @@ The project uses the **Breast Cancer Wisconsin dataset** available through Sciki
 - Problem Type: Binary Classification
 - Training Data: 80%
 - Testing Data: 20%
+- Random State: 42
 
 ## 🤖 Models Used
 
@@ -38,59 +39,98 @@ Gradient Boosting is used as a boosting-based ensemble model.
 | Random Forest | 95.61% | 95.89% | 97.22% | 96.55% |
 | Gradient Boosting | 95.61% | 94.67% | 98.61% | 96.60% |
 
-## ⚙️ Hyperparameter Tuning
+## 📊 Model Performance
+
+The models were compared using Accuracy, Precision, Recall, and F1-Score.
+
+**Logistic Regression achieved the best overall performance** among the three models.
+
+## ⚙️ Hyperparameter Tuning Using GridSearchCV
 
 Random Forest was optimized using **GridSearchCV**.
 
-Parameters tested:
+The following parameters were tested:
 
-```text
-n_estimators = [50, 100]
-max_depth = [3, 5, 7]
+- `n_estimators`: 50, 100
+- `max_depth`: 3, 5, 7
+- Cross-validation: 3 folds
+- Scoring metric: F1-Score
 
-🔄 Cross-Validation
-A 5-Fold Stratified Cross-Validation was performed to check model stability and reliability.
+## 🏆 Best Hyperparameters
+
+The best hyperparameters obtained from GridSearchCV were:
+
+- `n_estimators = 100`
+- `max_depth = 5`
+
+Best Cross-Validation F1-Score:
+
+**0.9633**
+
+## 🎯 Final Optimized Random Forest
+
+The optimized Random Forest achieved the following results on the test dataset:
+
+- Accuracy: **95.61%**
+- Precision: **95.89%**
+- Recall: **97.22%**
+- F1-Score: **96.55%**
+
+## 🔄 Cross-Validation
+
+A **5-Fold Stratified Cross-Validation** was performed to check model stability and reliability.
+
 The models were compared using:
-Mean Accuracy
-Accuracy Standard Deviation
-Mean F1-Score
-F1 Standard Deviation
 
-📌 Evaluation Techniques
-The following evaluation methods were used:
-Accuracy
-Precision
-Recall
-F1-Score
-Classification Report
-Confusion Matrix
-GridSearchCV
-5-Fold Cross-Validation
-📁 Project Files
-AI-ML-Task-5/
-│
-├── AI_ML_Task5.ipynb
-├── AI_ML_Task_5_Full_Report(1).pdf
-├── Task_5_Model_Comparison_Chart.png
-├── Task_5_Confusion_Matrix.png
-├── README.md
+- Mean Accuracy
+- Accuracy Standard Deviation
+- Mean F1-Score
+- F1 Standard Deviation
 
-🛠️ Technologies Used
-Python
-Pandas
-NumPy
-Matplotlib
-Scikit-learn
-Jupyter Notebook
+Logistic Regression showed the strongest overall cross-validation performance among the compared models.
 
-▶️ How to Run
-Install the required libraries:
+## 📌 Evaluation Techniques
+
+The following evaluation techniques were used:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Classification Report
+- Confusion Matrix
+- GridSearchCV
+- 5-Fold Cross-Validation
+
+## 📁 Project Files
+
+The repository contains the following files:
+
+- `AI_ML_Task5.ipynb` – Complete Python/Jupyter Notebook
+- `AI_ML_Task_5_Full_Report(1).pdf` – Detailed project report
+- `Task_5_Model Performance Comparison.png` – Model performance visualization
+- `Task_5_Confusion_Matrix.png` – Confusion matrix visualization
+- `README.md` – Project documentation
+- `requirements.txt` – Required Python libraries
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Jupyter Notebook
+
+## ▶️ How to Run
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/nvn05/AI-ML-Task-5-Ensemble-Learning.git
+cd AI-ML-Task-5-Ensemble-Learning
 pip install pandas numpy matplotlib scikit-learn jupyter
-
-Open the notebook:
 jupyter notebook AI_ML_Task_5_Complete.ipynb
-
-Run the notebook cells from top to bottom.
 
 🎓 Key Learning Outcomes
 
