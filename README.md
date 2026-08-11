@@ -48,7 +48,7 @@ Parameters tested:
 n_estimators = [50, 100]
 max_depth = [3, 5, 7]
 
-## 🔄 Cross-Validation
+## **🔄 Cross-Validation**
 A 5-Fold Stratified Cross-Validation was performed to check model stability and reliability.
 The models were compared using:
 Mean Accuracy
