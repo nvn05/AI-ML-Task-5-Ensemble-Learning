@@ -48,7 +48,7 @@ Parameters tested:
 n_estimators = [50, 100]
 max_depth = [3, 5, 7]
 
-## **🔄 Cross-Validation**
+🔄 Cross-Validation
 A 5-Fold Stratified Cross-Validation was performed to check model stability and reliability.
 The models were compared using:
 Mean Accuracy
@@ -56,7 +56,7 @@ Accuracy Standard Deviation
 Mean F1-Score
 F1 Standard Deviation
 
-## 📌 Evaluation Techniques
+📌 Evaluation Techniques
 The following evaluation methods were used:
 Accuracy
 Precision
@@ -66,7 +66,7 @@ Classification Report
 Confusion Matrix
 GridSearchCV
 5-Fold Cross-Validation
-## 📁 Project Files
+📁 Project Files
 AI-ML-Task-5/
 │
 ├── AI_ML_Task5.ipynb
@@ -75,7 +75,7 @@ AI-ML-Task-5/
 ├── Task_5_Confusion_Matrix.png
 ├── README.md
 
-## 🛠️ Technologies Used
+🛠️ Technologies Used
 Python
 Pandas
 NumPy
@@ -83,7 +83,7 @@ Matplotlib
 Scikit-learn
 Jupyter Notebook
 
-## ▶️ How to Run
+▶️ How to Run
 Install the required libraries:
 pip install pandas numpy matplotlib scikit-learn jupyter
 
@@ -92,7 +92,7 @@ jupyter notebook AI_ML_Task_5_Complete.ipynb
 
 Run the notebook cells from top to bottom.
 
-## 🎓 Key Learning Outcomes
+🎓 Key Learning Outcomes
 
 Through this project, I learned about:
 
@@ -108,7 +108,7 @@ Classification Metrics
 Confusion Matrix
 Model Selection
 
-## 👨‍💻 Author
+👨‍💻 Author
 Naveen kumar
 B.Tech – Computer Science & Engineering
 AI & Data Science
